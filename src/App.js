@@ -1,28 +1,21 @@
-import Hello from "./components/Hello";
-import Users from "./components/Users";
-import World from "./components/World";
-import {useState} from 'react'
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Client from "./components/Client";
+import Features from "./components/Features";
+import Pricing from "./components/Pricing";
+import Footer from "./components/Footer";
 
 const App = () => {
-  // let hello = "Hello World";
-  const [hello, setHello] = useState("Selamat Datang"); //Nilai default
-
-  const handleClick = () => {
-    // hello = "Welcome";
-    setHello ("Welcome")
-    console.log(hello)
-  };
-
   return (
-    /*JSX*/
-    <div>
-      <h1>{hello}</h1>
-      <h2>Hello React</h2>
-      <Hello text="Hello 1" number ={20}/>
-      <Hello text="Hello 2" number ={30}/>
-      <World />
-      <Users />
-      <button onClick={handleClick}>Click Me</button>
+    <div className="body-wrap">
+      <Header />
+      <main className="site-content">
+        <Hero />
+        <Client />
+        <Features />
+        <Pricing />
+      </main>
+      <Footer />
     </div>
   );
 };
